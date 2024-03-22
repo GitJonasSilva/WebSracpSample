@@ -1,0 +1,84 @@
+
+/* styles.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  background-color: #333;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+}
+
+.header {
+  background-color: #eee;
+  padding: 10px 50px; /* Push content to the right to not overlap the sidebar */
+  display: flex;
+  justify-content: start;
+}
+
+.tabs .tab {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.main-content {
+  padding-left: 50px; /* Push content to the right to not overlap the sidebar */
+  margin-top: 50px;
+}
+
+.table-responsive {
+  overflow: auto; /* Allows both horizontal and vertical scrolling */
+  background-color: #fdd;
+  padding: 0 20px;
+  height: 50vh; /* Fixed height to occupy 50% of the viewport height */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1500px; /* Minimum width to ensure table extends horizontally */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.pagination span {
+  cursor: pointer;
+}
+
+.pagination span:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #ccc;
+  height: 25vh;
+  padding: 10px 50px; /* Push content to the right to not overlap the sidebar */
+}
+
+/* Style adjustments for mobile devices */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 30px;
+  }
+  .header, .main-content, .footer {
+    padding-left: 30px;
+  }
+}
